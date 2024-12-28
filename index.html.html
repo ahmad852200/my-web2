@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الصفوة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #6a5acd;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        header h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        header h1 span {
+            font-size: 28px;
+            animation: bounce 2s infinite;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        header nav a:hover {
+            color: #ffefd5;
+        }
+        .banner {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #ff7f50, #ff4500);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            animation: slideIn 2s ease-in-out;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 200px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .product h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .product p {
+            color: #555;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .product button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .product button:hover {
+            background-color: #e63900;
+        }
+        .cart {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .cart:hover {
+            background-color: #e63900;
+        }
+        footer {
+            background-color: #6a5acd;
+            color: white;
+            padding: 15px 0;
+            margin-top: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>متجر الصفوة <span>🛒✨</span></h1>
+        <nav>
+            <a href="#">الرئيسية</a>
+            <a href="#">المنتجات</a>
+            <a href="#">عربة التسوق</a>
+        </nav>
+    </header>
+
+    <div class="cart">🛒 عربة التسوق</div>
+
+    <div class="banner">
+        المنتجات الجديدة هنا! 🌟 استكشف الآن
+    </div>
+
+    <section class="products">
+        <div class="product">
+            <img src="https://waqwaq.sa/wp-content/uploads/2023/05/tiandy-8mp-starlight-fixed-lens-ir-turret-camera-3840x2160-20fps-smart-ir-ir-range-50m-metal-housing-built-in-mic-sd-card-slot-ip67-poe-6490787_00-200x200.webp" alt="منتج 1">
+            <h3>منتج 1</h3>
+            <p>سعر: 100 ريال</p>
+            <button>أضف إلى العربة</button>
+        </div>
+        <div class="product">
+            <img src="https://souqstar.com/image/cache/catalog/products/%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA-%D8%AD%D8%AF%D9%8A%D8%AB%D8%A9/%D8%A7%D8%B5%D8%BA%D8%B1-%D8%A8%D8%B1%D9%88%D8%AC%D9%83%D8%AA%D8%B1-v50-%D8%AC%D9%87%D8%A7%D8%B2-%D8%B9%D8%B1%D8%B6-%D9%85%D8%AA%D9%86%D9%82%D9%84-%D8%B9%D8%A7%D9%84%D9%89-%D8%A7%D9%84%D8%AC%D9%88%D8%AF%D9%87-4-200x200.jpg" alt="منتج 2">
+            <h3>منتج 2</h3>
+            <p>سعر: 150 ريال</p>
+            <button>أضف إلى العربة</button>
+        </div>
+        <div class="product">
+            <img src="https://media.extra.com/s/aurora/100333336_800/Canon-Selphy-CP1500-Portable-Photo-Printer%2C-3-5-Inch%2C-WiFi%2C-White?locale=en-GB,ar-*,*&w=200&h=200" alt="منتج 3">
+            <h3>منتج 3</h3>
+            <p>سعر: 200 ريال</p>
+            <button>أضف إلى العربة</button>
+        </div>
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnJXwy4TcHqAL8ZNX7XOK1AcUAG20HBG207w&s" alt="منتج 4">
+            <h3>منتج 4</h3>
+            <p>سعر: 120 ريال</p>
+            <button>أضف إلى العربة</button>
+        </div>
+        <div class="product">
+            <img src="https://souqstar.com/image/cache/catalog/products/%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA-%D8%AD%D8%AF%D9%8A%D8%AB%D8%A9/%D8%AC%D8%B1%D8%B3-%D8%A8%D8%A7%D8%A8-%D9%83%D8%A7%D9%85%D9%8A%D8%B1%D8%A7-%D8%B7%D8%A7%D9%82%D8%A9-%D8%B4%D9%85%D8%B3%D9%8A%D8%A9-200x200w.png" alt="منتج 5">
+            <h3>منتج 5</h3>
+            <p>سعر: 170 ريال</p>
+            <button>أضف إلى العربة</button>
+        </div>
+    </section>
+
+    <footer>
+        حقوق الطبع والنشر &copy; 2024 متجر الصفوة
+    </footer>
+</body>
+</html>
